@@ -8,9 +8,9 @@ RUN set -xe \
 	&& sudo apt-get update -y \
 	&& sudo apt-get upgrade -y \
 	\
-	&& sudo apt-get install gcc-4.8 g++-4.8 \
-	&& sudo apt-get install gcc-4.9 g++-4.9 \
-	&& sudo apt-get install gcc-5 g++-5 \
+	&& sudo apt-get install gcc-4.8 g++-4.8 -y \
+	&& sudo apt-get install gcc-4.9 g++-4.9 -y \
+	&& sudo apt-get install gcc-5 g++-5 -y \
 	\
 	&& sudo updatedb && sudo ldconfig
 
