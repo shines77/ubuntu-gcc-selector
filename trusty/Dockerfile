@@ -1,7 +1,5 @@
 FROM ubuntu:14.04
 
-ADD ubuntu-trusty-core-cloudimg-amd64-root.tar.gz /
-
 RUN set -xe \
 	\
 	&& sudo apt-get install software-properties-common -y \
