@@ -1,8 +1,8 @@
 FROM ubuntu:14.04
 
-RUN set -xe \
-	\
-	&& sudo apt-get install software-properties-common -y \
+#RUN set -xe
+
+RUN sudo apt-get install software-properties-common -y \
 	\
 	&& sudo add-apt-repository ppa:ubuntu-toolchain-r/test \
 	&& sudo apt-get update -y \
@@ -12,7 +12,9 @@ RUN set -xe \
 	&& sudo apt-get install gcc-4.9 g++-4.9 -y \
 	&& sudo apt-get install gcc-5 g++-5 -y \
 	\
-	&& sudo updatedb && sudo ldconfig
+	&& sudo ldconfig
+
+# sudo updatedb
 
 RUN sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 48 \
 	--slave /usr/bin/gcc-ar gcc-ar /usr/bin/gcc-ar-4.8 \
